@@ -1,0 +1,25 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categories .category {
+    margin-left: 0.5rem;
+    margin-bottom: 0.6rem;
+    padding: 0.5rem;
+    border: 3px solid black;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.categories .category:hover {
+    background-color: black;
+    color: white;
+    border-color: white;    
+}
+
+.categories .category.selected {
+    background-color: blue;
+}
