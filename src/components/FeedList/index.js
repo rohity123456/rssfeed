@@ -12,10 +12,20 @@ function Feed({feed}) {
 
 
 
-function FeedList({feedList = []}) {
+function FeedList({feedList = [], selectedCategories=[]}) {
     return (
         <div className = 'feedList'>
-            {feedList.map(feed => <Feed feed = {feed} key = {feed?.guid}/>)}
+            {feedList.map(feed => {
+            if(selectedCategories.length===0) {
+                return(<Feed feed = {feed} key = {feed?.guid}/>)
+            } else{
+                const isCategoryFound = selectedCategories.some(category=> (feed?.categories||[]).includes(category))
+                if(isCategoryFound){
+                    return(<Feed feed = {feed} key = {feed?.guid}/>)
+                }
+            }
+            return null
+            })}
         </div>
     )
 }
