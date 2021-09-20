@@ -5,9 +5,7 @@ import './index.css'
 function Feed({feed}) {
     return (
         <div className = "feed">
-            <Accordion header = {feed?.title}>
-                {feed && feed["content:encodedSnippet"]}
-            </Accordion>
+            <Accordion feed = {feed} />
         </div>
     )
 }

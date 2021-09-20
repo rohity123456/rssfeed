@@ -20,10 +20,11 @@ function RSSFeed() {
     }, [])
     console.log(feedList)
     return (
-        <>
+        <div>
+            <h1 style={{textAlign:"center"}} >Back Channel</h1>
             <Categories categories = {categories}/>
             <FeedList feedList = {feedList}/>
-        </>
+        </div>
     )
 }
 
